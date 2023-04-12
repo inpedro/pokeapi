@@ -1,0 +1,206 @@
+body {
+	background: #fcffbd;
+	color: white;
+	margin: 0;
+	font-family: rubik;
+}
+
+.container {
+	padding: 40px;
+	margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+	
+}
+
+h1 {
+	text-align: center;
+	font-size: 120px;
+	height: 200px;
+	border: 3px solid #fcfcfc;
+    text-transform: uppercase;
+	background-image: url(https://images3.alphacoders.com/273/273289.jpg);
+	background-size: contain;
+}
+
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card {
+	list-style: none;
+	color: #ffffff;
+	text-align: center;
+	position: relative;
+    border-radius: 20px 20px 20px 20px;
+    border: 5px solid #ffffff;
+}
+
+.card::after {
+	content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius:  50% 50% 50% 50%;
+  background: #f4f4f4;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+
+}
+
+.steel {
+	background-color: #5f4949;
+}
+
+.steel > .card-title {
+    color: #f4f4f4;
+}
+
+.steel > .card-subtitle {
+    color: #f4f4f4;
+    text-transform: capitalize;
+}
+
+.fire {
+	background-color: #ff0000;
+}
+
+.fire > .card-title {
+    color: #f4f4f4;
+}
+
+.fire > .card-subtitle {
+    color: #f4f4f4;
+    text-transform: capitalize;
+}
+
+.grass {
+	background-color: #00bd0d;
+}
+
+.grass > .card-title {
+    color: #f4f4f4;
+}
+
+.grass > .card-subtitle {
+    color: #f4f4f4;
+    text-transform: capitalize;
+}
+
+.electric {
+	background-color: #FCF7DE;
+}
+
+.water, .ice {
+	background-color: #24baff;
+}
+
+.water, .ice > .card-title {
+    color: #f4f4f4;
+}
+
+.water, .ice > .card-subtitle {
+    color: #f4f4f4;
+    text-transform: capitalize;
+}
+
+.ground {
+	background-color: #f4e7da;
+}
+
+.rock {
+	background-color: #d5d5d4;
+}
+
+.fairy {
+	background-color: #fceaff;
+}
+
+.poison {
+	background-color: #6fa079;
+}
+
+.bug {
+	background-color: #f8d5a3;
+}
+
+.dragon {
+	background-color: #af9005;
+}
+
+.psychic,.psychic ~ .card-subtitle {
+	background-color: #070702;
+    color: #f4f4f4;
+}
+
+.flying {
+	background-color: #F5F5F5;
+}
+
+.fighting {
+	background-color: #E6E0D4;
+}
+
+.normal {
+	background-color: #a1a1a1;
+}
+
+.ghost {
+	background-color: #00bd0d;
+}
+
+.ghost > .card-title {
+    color: #f4f4f4;
+}
+
+.ghost > .card-subtitle {
+    color: #f4f4f4;
+    text-transform: capitalize;
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 20px;
+	font-weight: normal;
+	position: relative;
+	z-index: 3;
+}
+
+.card-subtitle {
+	margin-top: 5px;
+	color: #666;
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image {
+	height: 150px;
+	position: relative;
+	z-index: 1;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}
